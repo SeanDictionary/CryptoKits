@@ -1,5 +1,6 @@
 import sys
 import importlib.util
+import inspect
 
 def is_sage():
     """检查当前环境是否为 SageMath"""
@@ -7,4 +8,5 @@ def is_sage():
         import sage.all
         return True
     except:
-        raise ImportError("Error: the function is need to run on SageMath.")
+        return False
+        
